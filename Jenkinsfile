@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3'   // MUST match the name in Global Tool Configuration
+        maven 'Maven3'
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                bat 'mvn clean package'
             }
         }
 
